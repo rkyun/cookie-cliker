@@ -1,0 +1,161 @@
+$backgroud: #87D37C;
+
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+
+*{
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.body{
+  background: $backgroud;
+}
+
+.header{
+  color: white;
+  a{
+    color: white;
+  }
+  p{
+    margin: 0;
+  }
+}
+
+.container{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie{
+  width: 100%;
+  text-align: center;
+
+  &__button {
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border: 0;
+    border-radius: 50%;
+    outline: 0;
+    width: 30%;
+    background: 0;
+    transition: ease 0.1s transform;
+
+    @media(max-width: 800px){
+      width: 70%;
+    }
+    
+
+    &:active{
+      transform: scale(1.05);
+    }
+    
+  }
+  
+  &__stats{
+    font-size: 32px;
+    color: whitesmoke;
+  }
+}
+
+.upgrades{
+  
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  &__list{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-between;
+
+    @media(max-width: 570px){
+        flex-direction: column;
+      }  
+  }
+
+  &__item{
+    margin: 15px;
+  }
+
+  .item{
+    position: relative;
+    &__button{
+      background: rgba(255,255,255,0.05);
+      border: 0;
+      border-radius: 50%;
+      outline: 0;
+      padding: 10px;
+      
+      width: 150px;
+      height: 150px;
+     
+      color: whitesmoke;
+      font-size: 16px;
+
+       @media(max-width: 800px){
+        width: 80px;
+        height: 80px;
+      }
+
+      @media (max-width: 560px){
+         margin-top: 80px;
+      }
+
+      img{
+        pointer-events: none;
+      }
+    }
+
+    &__level{
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      display: inline-block;
+      background: whitesmoke;
+      border-radius: 50%;
+      width: 25px;
+      line-height: 25px;
+      text-align: center;
+    }
+
+    &__price{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+      img{
+        max-height: 12px;
+        position: relative;
+        top: 3px;
+
+      }
+    }
+
+    &--disabled{
+      opacity: 0.5;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
