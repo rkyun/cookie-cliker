@@ -2,6 +2,8 @@
 
 Cookie clicker clone for Skygate test.
 
+Live version: https://rykunbwoy.github.io/cookie-cliker/
+
 
 ### Installing
 
