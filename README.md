@@ -5,9 +5,11 @@ Cookie clicker clone for Skygate test.
 
 ### Installing
 
-To run this project install its dependencies from repository directory
+To run this project clone it and install its dependencies from repository directory
 
 ```
+git clone https://github.com/rykunbwoy/cookie-cliker.git
+cd cookie-cliker
 npm install
 ```
 
