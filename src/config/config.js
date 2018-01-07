@@ -1,4 +1,4 @@
-export const APP_VERSION = "1.0"
+export const APP_VERSION = "1.0.1"
 
 export const FPS = 30;
 export const SAVE_INTERVAL = 2  //seconds
