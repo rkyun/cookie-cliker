@@ -8,17 +8,28 @@ import { expect } from 'chai';
 
 import producers from '../src/js/producers';
 
-require('./setup');
+const jsdom = require('jsdom');
+
+const { JSDOM } = jsdom;
 
 let game;
 
 
-beforeEach(() => {
-  const view = new View();
-  const db = new Database();
-  game = new Game(db, view);
- 
-
+beforeEach((done) => {
+  JSDOM.fromFile( __dirname + '/../src/index.html')
+  .then(dom => {
+  
+    global.document = dom.window.document;
+    global.window = dom.window;
+    const view = new View();
+    const db = new Database();
+    game = new Game(db, view);
+    done();
+  })
+  .catch(error =>{
+    console.error(error);
+    done();
+  });
 });
 
 
